@@ -1,0 +1,58 @@
+
+body{
+	background-color: black;
+  color: white;
+
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 100px;
+  }
+}
+
+
+.text-muted{
+	color: silver;
+	font-size: 60;
+}
+
+.lists{
+  font-size: 22;
+  font-family: 'myriadPro';
+  margin-left: 20%;
+}
+
+.right_adjusted_main{
+  font-size: 22;
+  font-family: 'myriadPro';
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+
+}
+
+.logopos{
+  text-align: center;
+}
+
+.adjusted{
+  position: relative;
+  left: -30;
+  font-family: 'myriadPro';
+  color: aqua;
+}
+
+#mapPos{
+  text-align: center;
+}
+
+#nnPos{
+  text-align: center;
+}
+
+
+@font-face {
+  font-family: 'myriadPro';
+  src: url('MYRIADPRO-REGULAR.otf') format("opentype");
+}

@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" href="LoL.ico">
+  <title> PredictLeague - Results </title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet"
+  href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">		
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+ <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="mainpage.html">PredictLeague</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="mainpage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li class = "active"><a href="results.html">Results</a></li>
+        <li><a href="codeDictionary.html">Code Dictionary</a></li>
+        <li><a href="presentation.html">Presentation Slides</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div>
+  <div class = "right_adjusted_main">
+
+    <div>
+      <h2 class = "adjusted">
+        Results
+      </h2>
+    </div>
+    <p>
+
+      With my final dataset of 1781 games, the trained neural network was able to guess the correct winner of the game ~80% of the time. As can be seen in the graph below, the MSE of the validation, testing, and training set all flatlined at ~20% and then the training set began to decline while the testing set and validation set's MSEs began to rise. This is a common case of over-training on the training set so the training is stopped and the weights from the lowest MSE area is taken.
+      <br>
+      <br>
+      It is also clear from the below graph the the training was "complete" after only 30 epochs. This is a relatively small number of epochs, but it can possibly be explained by a lack of sufficient important data. I can attempt to get better results by retrieving and training the network on more data. Although I would have liked to see a larger number of epochs, which would have hopefully led to a better MSE, I believe that I need to find more important statistics for the neural net for more accurate results. There is a good amount of data about League of Legends players that I did not access (because I didn't feel that this data had a large effect on the outcome of the game), but it is possible that this other data has a larger influence on the game than I realize.  
+      <br>
+    </p>
+
+    <div id = "mapPos">
+      <br>
+      <br>
+      <img border="0" src="TrainingPerformance.jpg" alt="Training Performance" width = "700">
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+      <h2 class = "adjusted">
+        Conclusions
+      </h2>
+    </div>
+    <p>
+
+      From our results we know that this essentially means that with the current number of games we have for input, the best we are going to be able to do is to get the classification correct 4/5 of the time. In terms of predicting the outcome of a game, this is a very good number. This means that going into any game, people will be able to know from the very beginning what their odds are of winning. When looking at a game like League of Legends, there is a generally a good amount of perceived randomness to each game, but clearly the underlying statistics of each player still matter quite a bit. 
+    </p>
+    <div>
+      <h2 class = "adjusted">
+        Future Work
+      </h2>
+    </div>
+    <p>
+      From here, I am only hoping to improve the outcome prediction and make a real website that can access live games. I believe that I can add more statistics like the number of games played total, which I don't currently include. I hope to also make multiple networks that are dependent upon the game type. This network currently includes all game types, but I believe sorting into game type will lead to even better results. 
+
+      The final step which I hope to accomplish is to make a live website which people can type in their username and it will return the odds of success of their current game. Unfortunately, League of Legends API does not include any functionality for getting the current game information (it is only possible to access completed games). Different entities have setup functionality for getting around this hurdle by making falsified requests to the Riot servers, which get the current game players. Unfortunately, you need to request a developer key to be able to access these API's. I have requested access to this data, but they have not replied as of 5/4. 
+
+    </p>
+  </div>
+</div>
+</body>
